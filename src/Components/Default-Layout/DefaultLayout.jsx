@@ -17,11 +17,11 @@ export const DefaultLayout = () => {
 
     const token = localStorage.getItem("jwt_token");
 
-    // useEffect(() => {
-    //     if (!token) {
-    //         navigate("/sign-in");
-    //     }
-    // }, [token]);
+    useEffect(() => {
+        if (!token) {
+            navigate("/sign-in");
+        }
+    }, [token]);
 
     const [mobileToggle, setMobileToggle] = useState(false);
 

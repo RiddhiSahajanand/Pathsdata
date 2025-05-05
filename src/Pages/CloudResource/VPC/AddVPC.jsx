@@ -33,6 +33,7 @@ const AddVPC = () => {
         vpc_id: "",
         security_group_ids: [],
         subnet_ids: [],
+        region: ""
         // vpc_ep_id: "",
     });
 
@@ -261,6 +262,24 @@ const AddVPC = () => {
                             </div>
                         </div>
                     </div> */}
+
+                        <div className="row mt-4">
+                            <label htmlFor="region" className="form-label">Region</label>
+                            <div className="col-lg-12 mb-3 ">
+                                <div className=''>
+                                    <div className="add-input">
+                                        <input
+                                            type="text"
+                                            name="region"
+                                            placeholder="Enter Region"
+                                            value={formData.region}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </section>

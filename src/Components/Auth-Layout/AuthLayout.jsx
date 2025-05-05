@@ -10,7 +10,7 @@ const AuthLayout = () => {
 
     useEffect(() => {
         if (token) {
-            // navigate("/home");
+            navigate("/home");
         }
     }, [token]);
 

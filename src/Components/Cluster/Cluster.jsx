@@ -253,7 +253,7 @@ const Cluster = () => {
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div onClick={() => navigate("/cluster-details")}>
+                                                            <div onClick={()=> navigate("/cluster-details")}>
                                                                 {item.cluster_type}
                                                             </div>
                                                         </td>

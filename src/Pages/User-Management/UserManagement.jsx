@@ -19,8 +19,12 @@ import { authorizationHeaders, Axios } from '../../helper/Axios';
 import { toast } from 'react-toastify';
 import { Switch } from 'antd';
 import DeleteVpc from '../../Components/Modal/Delete/DeleteVpc';
-import { InviteUsers } from '../../Components/Modal/InviteUsers/InviteUsers';
+import CreateUsers from '../../Components/Modal/Users/CreateUsers';
 
+const initialState= {
+    createUser: false,
+    deleteUser: false,
+}
 
 const UserManagement = () => {
     const navigate = useNavigate();
@@ -35,15 +39,17 @@ const UserManagement = () => {
     const [userList, setUserList] = useState([]);
     const [loader, setLoader] = useState(false);
     const [error, setError] = useState(null);
+
+
+    const [show, setShow] = useState(initialState);
     const [deleteId, setDeleteId] = useState({});
-    const [show, setShow] = useState(false);
-    const [inviteShow, setInviteShow] = useState(false);
 
     const handleClose = () => {
-        setShow(false);
+        setShow(initialState);
         setDeleteId('')
-        setInviteShow(false);
     }
+
+
 
     const GetUserList = async () => {
         setLoader(true);
@@ -94,7 +100,7 @@ const UserManagement = () => {
 
             if (res?.data?.statusCode === 200) {
                 toast.success(res.data?.message);
-                setShow(false);
+                setShow(initialState);
                 GetUserList();
             }
             else {
@@ -161,6 +167,7 @@ const UserManagement = () => {
     const addMember = () => {
         navigate("/add-member");
     }
+    
     return (
         <>
 
@@ -199,7 +206,7 @@ const UserManagement = () => {
                                         </div>
 
                                         <button className="add-btn boreder-0 " type="button" onClick={() => addMember()}>
-                                            Invite Users
+                                            Add Member
                                             <img src={plusicon} className='ms-2' />
                                         </button>
 
@@ -283,7 +290,10 @@ const UserManagement = () => {
                                                                 <div>
                                                                     <img src={editbtn} alt="Edit" className='me-4' />
                                                                     <img src={deletebtn} alt="Delete" style={{ cursor: 'pointer' }} onClick={() => {
-                                                                        setShow(true)
+                                                                        setShow((prev)=> ({
+                                                                            prev, 
+                                                                            deleteUser: true
+                                                                        }))
                                                                         setDeleteId(item?.email_id)
                                                                     }} />
                                                                 </div>
@@ -317,10 +327,11 @@ const UserManagement = () => {
                         </div>
                     </div>
                 </div>
-                <DeleteVpc show={show} handleClose={handleClose} handleDelete={handleDelete} />
-                <InviteUsers show={inviteShow} handleClose={handleClose} />
-
             </section>
+
+            {/* <CreateUsers show={modalShow.addadmin} handleClose={handleClose} GetUserList={GetUserList} /> */}
+
+            <DeleteVpc show={show.deleteUser} handleClose={handleClose} handleDelete={handleDelete} />
         </>
     )
 }

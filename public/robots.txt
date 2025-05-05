@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Allow: /static/
+Allow: /assets/
+
+Sitemap: https://www.pathsdata.com/sitemap.xml

@@ -1,0 +1,162 @@
+.webpage-header {
+    margin: 10px 35px 10px;
+    /* border: 1px solid; */
+}
+
+.webpage-header nav .navbar-collapse {
+    padding: 0 45px;
+}
+
+.webpage-header nav .offcanvas.offcanvas-start {
+    border: none;
+}
+
+.webpage-header nav .navbar-brand {
+    cursor: pointer;
+}
+
+.webpage-header nav .navbar-toggler {
+    border: none;
+}
+
+.webpage-header nav .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.webpage-header nav .navbar-brand img {
+    /* width: 30%; */
+    /* max-width: 80px; */
+}
+
+/* @media (max-width: 575px){
+    .webpage-header nav .navbar-brand img {
+    width: 30%;
+}
+}
+*/
+
+/* .webpage-header nav .navbar-nav{
+    margin: 0 0 0 60px;
+} */
+
+.webpage-header nav .navbar-brand .logo {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.webpage-header nav .navbar-nav .nav-item a {
+    padding: 16px 40px 10px 20px !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+
+    transition: 0.5s;
+    text-decoration: none;
+    position: relative;
+}
+
+.webpage-header nav .navbar-nav .nav-item a:hover {
+    /* color: #006ed5; */
+
+}
+
+.webpage-header nav .navbar-nav .nav-item a::after {
+    transform: 0.54s;
+}
+
+.webpage-header nav .navbar-nav .nav-item a.active {
+    color: #006ed5;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("../../assets/images/toggel-menu.png")
+}
+
+.webpage-header .offcanvas {
+    background-color: rgba(0, 2, 22, 1);
+}
+
+@media (max-width: 991px) {
+    .webpage-header .offcanvas {
+        border-right: 1px solid rgba(255, 255, 255, .4) !important;
+    }
+}
+
+.webpage-header .offcanvas .offcanvas-header .btn-close:focus {
+    box-shadow: none;
+}
+
+.webpage-header .offcanvas .offcanvas-header .btn-close:before {
+    content: '\2715';
+    font-size: 1.5rem;
+    /* color: rgba(255, 255, 255, .4); */
+    color: rgb(255 255 255);
+    display: inline-block;
+    line-height: 0;
+    opacity: 1;
+}
+
+
+@media (max-width: 1199px) {
+    .webpage-header {
+        margin: 10px 30px 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .moblie-brand {
+        display: none;
+    }
+
+    .webpage-header .navbar .container-fluid {
+        justify-content: space-between;
+    }
+
+    .webpage-header nav .navbar-nav .nav-item a {
+        padding-left: 0 !important;
+    }
+
+    .grop-btn {}
+
+    .grop-btn .login-btn {
+        display: table-caption;
+        margin-top: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .webpage-header nav .navbar-nav .nav-item a {
+        font-size: 15px;
+    }
+
+    .webpage-header {
+        /* margin: 35px 30px 10px; */
+    }
+}
+
+
+@media (max-width: 575px) {
+    .webpage-header {
+        margin: 10px 25px 10px;
+    }
+
+    .webpage-header nav .navbar-brand img {
+        width: 83%;
+    }
+}
+
+@media (max-width: 475px) {
+    .webpage-header {
+        margin: 10px 20px 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .webpage-header {
+        margin: 10px 20px 10px;
+    }
+}

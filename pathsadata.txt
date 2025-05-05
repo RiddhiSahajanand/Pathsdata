@@ -1,0 +1,37 @@
+1. Profile
+
+GET : https://api.pathsdata.com/profile
+
+response :
+{
+"statusCode": 200,
+"message": "Retrieved user details successfully",
+"data": {
+"phone_number": "917698307252",
+"subscription_type": "enterprise",
+"country": "India",
+"email_id": "riddhi.sahajanand01@gmail.com",
+"name": "riddhitest",
+"language": "English"
+}
+}
+
+Missing image_base64_value
+
+2.  Credential Configure
+
+POST : https://api.pathsdata.com/credential_configure
+
+{
+"statusCode": 400,
+"message": "Invalid role_arn. The ARN should be in the format of arn:aws:iam::12_DIGIT_ACCOUNT_NUMBER:role/ROLE_NAME"
+}
+
+3.User Management
+
+GET : https://api.pathsdata.com/users?family_id=fam-146414
+
+{
+"message": "",
+"statusCode": ""
+}
